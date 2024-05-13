@@ -1,0 +1,71 @@
+﻿@page "/weather"
+@using WeatherAPI.Shared.Models;
+@using WeatherAPI.Shared.Service;
+@inject WeatherService WeatherService;
+@inject HttpClient Http
+@using System.Net.Http.Json;
+
+<head>
+    <script src="https://kit.fontawesome.com/e4f894e367.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="search-part">
+        <header>Enter City Name</header>
+        <form @onsubmit="FetchWeather">
+            <input type="text" @bind="cityName" placeholder="" />
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    @if (weather == null)
+    {
+        <p><em>...</em></p>
+    }
+    else
+    {
+        <div class="wrapper">
+            <header>Weather</header>
+            <section class="weather-part">
+                <img src="@($"http://openweathermap.org/img/wn/{weather.Weather[0].Icon}@2x.png")" alt="Alternate Text" />
+                <div class="temp">
+                    <span class="numb">@weather.Main.Temp</span>
+                    <span class="deg">°</span>C
+                </div>
+                <div class="weather">@weather.Weather[0].Description</div>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>@weather.Name</span>
+                </div>
+                <div class="bottom-details">
+                    <div class="column feels">
+                        <i class="fa-solid fa-temperature-low"></i>
+                        <div style="margin-left:10px" class="details">
+                            <div class="temp">
+                                <span class="numb">@weather.Main.Feels_like</span>
+                                <span class="deg">°</span>C
+                            </div>
+                            <p>Feels Like</p>
+                        </div>
+                    </div>
+                    <div class="column humidity">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div style="margin-left:10px" class="details">
+                            <span class="numb">@weather.Main.Humidity</span>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    }
+</body>
+
+@code {
+    private WeatherData weather;
+    private string cityName;
+
+    private async Task FetchWeather()
+    {
+        weather = await WeatherService.GetWeather(cityName);
+    }
+}

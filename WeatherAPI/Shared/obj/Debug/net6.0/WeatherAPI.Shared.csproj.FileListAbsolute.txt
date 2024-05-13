@@ -1,0 +1,11 @@
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\bin\Debug\net6.0\WeatherAPI.Shared.deps.json
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\bin\Debug\net6.0\WeatherAPI.Shared.dll
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\bin\Debug\net6.0\WeatherAPI.Shared.pdb
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\obj\Debug\net6.0\WeatherAPI.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\obj\Debug\net6.0\WeatherAPI.Shared.AssemblyInfoInputs.cache
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\obj\Debug\net6.0\WeatherAPI.Shared.AssemblyInfo.cs
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\obj\Debug\net6.0\WeatherAPI.Shared.csproj.CoreCompileInputs.cache
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\obj\Debug\net6.0\WeatherAPI.Shared.dll
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\obj\Debug\net6.0\refint\WeatherAPI.Shared.dll
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\obj\Debug\net6.0\WeatherAPI.Shared.pdb
+D:\Blazor Projects\WeatherAPI\WeatherAPI\Shared\obj\Debug\net6.0\ref\WeatherAPI.Shared.dll
